@@ -1,0 +1,251 @@
+<html>
+
+<head>
+    <title>WIE Hackathon</title>
+    <style>
+        * {
+            background-color: #1A054A;
+            color: white;
+        }
+
+        .title {
+            color: white;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .Presents {
+            color: white;
+            text-align: center;
+            font-size: 40px;
+        }
+/* Hackode animation*/
+        h1 {
+            margin: 0;
+            padding-bottom: 6rem;
+            grid-column: 1;
+            grid-row: 1;
+            z-index: 1;
+            font-family: 'Teko', sans-serif;
+            font-size: 8rem;
+            text-transform: uppercase;
+            animation: glow 2s ease-in-out infinite alternate;
+            text-align: center;
+        }
+
+        a {
+            font-family: 'Teko', sans-serif;
+            color: #4db1bc;
+            grid-column: 1;
+            grid-row: 1;
+            align-self: end;
+            justify-self: center;
+            padding-bottom: 1rem;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px #2d9da9;
+            }
+
+            to {
+                text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+            }
+        }
+
+        h2{
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .type-ani{
+  overflow: hidden;
+  padding-top: 5%;
+}
+.line-1{
+  /* position: relative;
+  top: 50%;   */
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 50px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+animation: typewriter 4s steps(44) 1s 1 normal both,
+           blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+from{width: 0;}
+to{width: 9em;}
+}
+@keyframes blinkTextCursor{
+from{border-right-color: rgba(255,255,255,.75);}
+to{border-right-color: transparent;}
+}
+
+/* img */
+  #stage2 {
+    margin: 2em auto 1em 50%;
+    height: 240px;
+    text-align: left;
+    align-items: left;
+    position: left;
+    -webkit-perspective: 1200px;
+    -webkit-perspective-origin: 0 50%;
+    -moz-perspective: 1200px;
+    -moz-perspective-origin: 0 50%;
+    -ms-perspective: 1200px;
+    -ms-perspective-origin: 0 50%;
+  }
+
+  #rotator2 a {
+    position: absolute;
+    left: -151px;
+    -moz-transform-style: preserve-3d;
+  }
+  #rotator2 a img {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+  }
+
+  #rotator2 a:nth-child(1) img {
+    -webkit-transform: rotateY(-120deg) translateZ(80px);
+    -moz-transform: rotateY(-120deg) translateZ(80px);
+    -ms-transform: rotateY(-120deg) translateZ(80px);
+  }
+  #rotator2 a:nth-child(2) img {
+    -webkit-transform: translateZ(80px);
+    -moz-transform: translateZ(80px);
+    -ms-transform: translateZ(80px);
+  }
+  #rotator2 a:nth-child(3) img {
+    -webkit-transform: rotateY(120deg) translateZ(80px);
+    -moz-transform: rotateY(120deg) translateZ(80px);
+    -ms-transform: rotateY(120deg) translateZ(80px);
+  }
+  #rotator2 a:nth-child(n+4) { display: none; }
+
+  @-webkit-keyframes rotator2 {
+    from { -webkit-transform: rotateY(0deg);  }
+    to   { -webkit-transform: rotateY(-120deg); }
+  }
+  @-moz-keyframes rotator2 {
+    from { -moz-transform: rotateY(0deg);  }
+    to   { -moz-transform: rotateY(-120deg); }
+  }
+  @-ms-keyframes rotator2 {
+    from { -ms-transform: rotateY(0deg);  }
+    to   { -ms-transform: rotateY(-120deg); }
+  }
+
+  #rotator2 {
+    -webkit-transform-origin: 0 0;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-timing-function: cubic-bezier(1, 0.2, 0.2, 1);
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay: 1s;
+    -moz-transform-origin: 0 0;
+    -moz-transform-style: preserve-3d;
+    -moz-animation-timing-function: cubic-bezier(1, 0.2, 0.2, 1);
+    -moz-animation-duration: 2s;
+    -moz-animation-delay: 1s;
+    -ms-transform-origin: 0 0;
+    -ms-transform-style: preserve-3d;
+    -ms-animation-timing-function: cubic-bezier(1, 0.2, 0.2, 1);
+    -ms-animation-duration: 2s;
+    -ms-animation-delay: 1s;
+  }
+  #rotator2:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+  }
+
+
+       
+    </style>
+        <script type="text/javascript">
+
+            // Original JavaScript code by Chirp Internet: chirpinternet.eu
+            // Please acknowledge use of this code by including this header.
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                var rotateComplete = function () {
+                    with (target.style) {
+                        webkitAnimationName = MozAnimationName = msAnimationName = "";
+                    }
+                    target.appendChild(arr[0]);
+                    setTimeout(function (el) {
+                        with (el.style) {
+                            webkitAnimationName = MozAnimationName = msAnimationName = "rotator2";
+                        }
+                    }, 0, target);
+                };
+
+                var target = document.getElementById("rotator2");
+                var arr = target.getElementsByTagName("a");
+
+                target.addEventListener("webkitAnimationEnd", rotateComplete, false);
+                target.addEventListener("animationend", rotateComplete, false);
+                target.addEventListener("MSAnimationEnd", rotateComplete, false);
+
+            }, false);
+
+        </script>
+</head>
+
+<body>
+    <img src="logo.png" alt="WIE" width="80px" ; height="80px">
+    <div class="title"> IEEE Women In Engineeing, VIT</div>
+    <div class="presents"> Presents</div> 
+    
+                <div id="stage2">
+                    <div id="rotator2"
+                        style="-webkit-animation-name: rotator2; -moz-animation-name: rotator2; -ms-animation-name: rotator2; text-align: left;">
+                        <a href="amy hood 1.png"><img align="left" src="amy hood 1.png" width="280" style = "align:left"></a>
+                        <a href="Reshma-Saujani 1.png"><img align="left" src="Reshma-Saujani 1.png" width="280" style = "align:left"></a>
+                        <a href="susan 1.png"><img  align="left" src="susan.png" width="280" style = "align:left"></a>
+                    </div>
+                </div>
+           
+            <div>
+                <div>
+                    <h1>
+                        <span class='one'>H</span><span class='two'>ac</span><span class='three'>k</span><span
+                            class='four'>ode</span>
+                    </h1>
+                    <h2>She Rise We Rise (#HackForHer)</h2>
+                </div>
+                <div class="type-ani">
+                    <p class="line-1 anim-typewriter">COMMING SOON...</p>
+                </div>
+           
+    
+        
+      
+        <!-- <img src="amy.png" style="text-align: left;"> -->
+    
+<!-- <h2>She Rise We Rise (#HackForHer)</h2>
+    <div class="type-ani">
+        <p class="line-1 anim-typewriter">COMMING SOON...</p>
+    </div> -->
+    <!-- <div class="center">
+
+    <img src="amy.png" alt="WIE">
+    </div> -->
+
+</body>
+
+</html>
